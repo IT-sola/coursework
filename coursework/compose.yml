@@ -1,0 +1,53 @@
+version: '3'
+services:
+  recommendation_service:
+    image: maxmassmatrix/recommendation_service
+    ports:
+      - "8080:8080"
+    deploy:
+      replicas: 2 
+  authentication_service:
+    image: maxmassmatrix/authentication_service
+    ports:
+      - "8082:8080" 
+  authorzation_service:
+    image: maxmassmatrix/authorzation_service
+    ports:
+      - "8083:8080"
+    deploy:
+      replicas: 2 
+  uploading_service:
+    image: maxmassmatrix/uploading_service
+    ports:
+      - "8081:8080"
+    deploy:
+      replicas: 10 
+  personalized_service:
+    image: maxmassmatrix/personalized_service
+    ports:
+      - "8084:8080"
+    deploy:
+      replicas: 2 
+  region_service:
+    image: maxmassmatrix/region_service
+    ports:
+      - "8085:8080"
+    deploy:
+      replicas: 2 
+  subcription_service:
+    image: maxmassmatrix/subcription_service
+    ports:
+      - "8086:8080"
+    deploy:
+      replicas: 10
+  maxlive-net:
+    image: maxmassmatrix/maxlive_net
+    ports:
+      - "8087:8085"
+    networks:
+      - internal_network
+
+networks:
+  internal_network:
+    internal: true
+  
