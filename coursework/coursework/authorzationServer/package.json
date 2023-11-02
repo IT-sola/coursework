@@ -1,0 +1,16 @@
+{
+  "name": "authorzationserver",
+  "version": "1.0.0",
+  "description": "",
+  "main": "authorzationServer.js",
+  "scripts": {
+    "start": "node authorzationServer.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Ming",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "name": "coursework",
+  "version": "1.0.0",
+  "description": "this is reconmmendation function",
+  "main": "reconmmendation.js",
+  "scripts": {
+    "start": "node reconmmendation.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "shijun li",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  }
+}
